@@ -6,13 +6,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
-const sugar = 'rgb(255, 46, 99)';
-const ice = 'rgb(8, 217, 214)';
-
 const sugarNice = `
-color: ${sugar} !important;
+color: rgb(255, 46, 99) !important;
 &:hover {
-  color: ${ice} !important;
+  color: rgb(8, 217, 214) !important;
 }
 `;
 
@@ -22,10 +19,10 @@ const Collapser = styled.h1`
 
 const Menu = styled.div`
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease-out;
   max-height: 0;
   &.active {
-    max-height: 400px;
+    max-height: 200px;
   }
 `;
 
@@ -39,6 +36,9 @@ const AwwwsomeLogo = styled(FontAwesomeIcon)`
 `;
 
 const Title = styled.h1`
+  font-size: 3.7rem !important;
+  font-weight: 700 !important;
+  line-height: 5rem;
   ${sugarNice}
 `;
 
@@ -52,13 +52,13 @@ function Navigation() {
     <>
       <div className="col">
         <div className="container pt-3 pb-1">
-          <div className="row align-content-end">
+          <div className="row align-items-center">
             <Link className="col text-center" to=".\">
               <Title>EMRE CAN ÇORAPÇI</Title>
             </Link>
-            <div className="col-auto">
+            <div className="col-auto h-100">
               <Collapser onClick={() => setActive(!active)}>
-                <AwwwsomeIcon icon={faBars} />
+                <AwwwsomeIcon icon={faBars} size="xl" />
               </Collapser>
             </div>
           </div>
@@ -68,10 +68,13 @@ function Navigation() {
         <div className="container my-2 mt-3">
           <div className="row justify-content-between">
             <div className="col-auto">
-              <Link className="row" to="Projects">
+              <Link className="row" to=".\" onClick={() => setActive(!active)}>
+                <MenuItem className="col-auto">HOME</MenuItem>
+              </Link>
+              <Link className="row" to="Projects" onClick={() => setActive(!active)}>
                 <MenuItem className="col-auto">PROJECTS</MenuItem>
               </Link>
-              <Link className="row" to="Contact">
+              <Link className="row" to="Contact" onClick={() => setActive(!active)}>
                 <MenuItem className="col-auto">CONTACT ME</MenuItem>
               </Link>
             </div>

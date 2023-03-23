@@ -2,6 +2,9 @@
 
 html {
   scroll-behavior: smooth;
+
+  scrollbar-color: rgb(255, 46, 99) black;
+  scrollbar-width: thin;
 }
 
 body {
@@ -15,6 +18,8 @@ body {
 
 main {
   min-height: 73vh;
+
+  background-color: black;
 }
 
 footer {
@@ -77,4 +82,16 @@ h3 {
 
 .bg-light {
   background-color: rgb(234, 234, 234) !important;
+}
+
+.h08{
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  line-height: 4rem;
+}
+
+.h09 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  line-height: 3.5rem;
 }
