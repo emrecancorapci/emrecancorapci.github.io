@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -43,6 +42,11 @@ const Title = styled.h1`
 `;
 
 const MenuItem = styled.h2`
+  ${sugarNice}
+`;
+
+const Link = styled.p`
+  cursor: pointer;
   ${sugarNice}
 `;
 

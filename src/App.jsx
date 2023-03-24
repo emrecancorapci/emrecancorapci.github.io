@@ -1,6 +1,8 @@
 import Footer from './Components/Footer';
 import Navigation from './Components/Navigation';
-import Router from './Router';
+import Home from './Pages/Home';
+import Projects from './Pages/Projects';
+import ContactMe from './Pages/ContactMe';
 
 /**
  * App component
@@ -16,9 +18,21 @@ export default function App() {
           <Navigation />
         </div>
       </nav>
-      <main className="row py-4">
-        <div className="col">
-          <Router />
+      <main>
+        <div className="row">
+          <div className="col">
+            <Home />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <Projects />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <ContactMe />
+          </div>
         </div>
       </main>
       <footer className="row mt-4">
