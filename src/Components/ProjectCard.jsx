@@ -1,15 +1,6 @@
 /* eslint-disable no-irregular-whitespace */
 import styled from 'styled-components';
 
-const CardOneBottom = styled.div`
-  background-color: rgb(8, 217, 214);
-`;
-
-const CardOneTop = styled.div`
-  background-color: rgb(255, 46, 99);
-  margin: -16px 0px 16px -16px;
-`;
-
 const CardTitle = styled.h1`
   font-size: 3.5rem !important;
   font-weight: 700 !important;
@@ -17,14 +8,14 @@ const CardTitle = styled.h1`
   color: black !important;
 `;
 
-const WhiteText = styled.span`
+const TechWhite = styled.span`
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 2.5rem;
   color: white;
 `;
 
-const BlackText = styled.span`
+const TechBlack = styled.span`
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 2.5rem;
@@ -32,6 +23,11 @@ const BlackText = styled.span`
 `;
 
 const SourceText = styled.a`
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  text-align: right !important;
   font-size: 3rem;
   font-weight: 700;
   line-height: 3rem;
@@ -48,29 +44,30 @@ const SourceBackground = styled.p`
   }
 `;
 
-function ProjectCard() {
+export default function ProjectCard({ data: { title, technologies, source } }) {
   return (
-    <CardOneBottom className="row my-2 mx-4">
-      <CardOneTop className="col p-3">
-        <CardTitle>YET ANOTHER BLOG PROJECT</CardTitle>
-        <WhiteText>.NET​</WhiteText>
-        <BlackText>ENTITY​FRAMEWORK​</BlackText>
-        <WhiteText>POSTGRESQL​</WhiteText>
-        <BlackText>REACT​</BlackText>
-        <WhiteText>BOOTSTRAP​</WhiteText>
-        <BlackText>TYPESCRIPT</BlackText>
-        <SourceBackground className="px-3 text-end py-2">
-          <SourceText
-            href="https://github.com/emrecancorapci/YetAnotherBlogProject_Frontend"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            SOURCE
-          </SourceText>
-        </SourceBackground>
-      </CardOneTop>
-    </CardOneBottom>
+    <>
+      <div className="row p-2">
+        <div className="col">
+          <CardTitle>{title}</CardTitle>
+          {technologies.map((technology, index) =>
+            // eslint-disable-next-line prettier/prettier
+            (index % 2 === 0
+            ? <TechWhite>{technology}​</TechWhite>
+            : <TechBlack>{technology}​</TechBlack>)
+          )}
+        </div>
+      </div>
+
+      <div className="row">
+        {source ? (
+          <SourceBackground>
+            <SourceText href={source} target="_blank" rel="noopener noreferrer">
+              SOURCE
+            </SourceText>
+          </SourceBackground>
+        ) : null}
+      </div>
+    </>
   );
 }
-
-export default ProjectCard;
