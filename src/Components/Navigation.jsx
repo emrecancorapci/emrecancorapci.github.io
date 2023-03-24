@@ -1,9 +1,13 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+
+import { useActive } from '../Contexts/ActiveContext';
 
 const sugarNice = `
 color: rgb(255, 46, 99) !important;
@@ -52,6 +56,7 @@ const Link = styled.p`
 
 function Navigation() {
   const [active, setActive] = useState(false);
+  const { setActivePage } = useActive();
   return (
     <>
       <div className="col">
@@ -72,13 +77,32 @@ function Navigation() {
         <div className="container my-2 mt-3">
           <div className="row justify-content-between">
             <div className="col-auto">
-              <Link className="row" to=".\" onClick={() => setActive(!active)}>
+              {/* TODO: Needs refactoring */}
+              <Link
+                className="row"
+                onClick={() => {
+                  setActive(!active);
+                  setActivePage('Home');
+                }}
+              >
                 <MenuItem className="col-auto">HOME</MenuItem>
               </Link>
-              <Link className="row" to="Projects" onClick={() => setActive(!active)}>
+              <Link
+                className="row"
+                onClick={() => {
+                  setActive(!active);
+                  setActivePage('Projects');
+                }}
+              >
                 <MenuItem className="col-auto">PROJECTS</MenuItem>
               </Link>
-              <Link className="row" to="Contact" onClick={() => setActive(!active)}>
+              <Link
+                className="row"
+                onClick={() => {
+                  setActive(!active);
+                  setActivePage('ContactMe');
+                }}
+              >
                 <MenuItem className="col-auto">CONTACT ME</MenuItem>
               </Link>
             </div>

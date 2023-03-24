@@ -1,3 +1,7 @@
+import styled from 'styled-components';
+
+import { useActive } from './Contexts/ActiveContext';
+
 import Footer from './Components/Footer';
 import Navigation from './Components/Navigation';
 import Home from './Pages/Home';
@@ -6,11 +10,21 @@ import ContactMe from './Pages/ContactMe';
 
 /**
  * App component
- * @description This is the main component of the app. It contains the Navbar, the Router and the Footer.
+ * @description This is the main component of the app. It contains the Navigation, Home, Projects and ContactMe components.
  * @returns {JSX.Element} App
  */
 
+const Page = styled.div`
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  &.active {
+    max-height: ${(props) => props.height};
+  }
+`;
+
 export default function App() {
+  const { activePage } = useActive();
   return (
     <>
       <nav className="row bg-black">
@@ -19,21 +33,21 @@ export default function App() {
         </div>
       </nav>
       <main>
-        <div className="row">
+        <Page className={`row ${activePage === 'Home' ? 'active' : ''}`} height="80vh">
           <div className="col">
             <Home />
           </div>
-        </div>
-        <div className="row">
+        </Page>
+        <Page className={`row ${activePage === 'Projects' ? 'active' : ''}`} height="100vh">
           <div className="col">
             <Projects />
           </div>
-        </div>
-        <div className="row">
+        </Page>
+        <Page className={`row ${activePage === 'ContactMe' ? 'active' : ''}`} height="80vh">
           <div className="col">
             <ContactMe />
           </div>
-        </div>
+        </Page>
       </main>
       <footer className="row mt-4">
         <Footer />
