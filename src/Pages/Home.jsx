@@ -1,14 +1,9 @@
-import ProjectCard from '../Components/ProjectCard';
-
 function Home() {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
-        <div className="col-12 col-lg-6 col-md-12">
-          <ProjectCard />
-        </div>
-        <div className="col-6">
-          <h1 className="text-white">DIV2</h1>
+        <div className="col">
+          <p className="h08 text-center text-black">Hi! I&apos;m a Software Developer from Turkey</p>
         </div>
       </div>
     </div>
