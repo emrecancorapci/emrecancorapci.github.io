@@ -3,18 +3,13 @@ import ProjectCard from '../Components/ProjectCard';
 
 const projects = [
   {
-    title: 'YET ANOTHER BLOG PROJECT',
-    technologies: [
-      'LAYERED​ARCHITECTURE',
-      '.NET7',
-      'ENTITY​FRAMEWORK',
-      'POSTGRESQL',
-      'REACT',
-      'BOOTSTRAP',
-      'TYPESCRIPT',
-      'FONT​AWESOME',
-      'VITE',
-    ],
+    title: 'YET ANOTHER BLOG PROJECT BACKEND',
+    technologies: ['LAYERED​ARCHITECTURE', '.NET7', 'ENTITY​FRAMEWORK', 'POSTGRESQL'],
+    source: 'https://github.com/emrecancorapci/YetAnotherBlogProject_Backend',
+  },
+  {
+    title: 'YET ANOTHER BLOG PROJECT FRONTEND',
+    technologies: ['REACT', 'BOOTSTRAP', 'TYPESCRIPT', 'FONT​AWESOME', 'VITE'],
     source: 'https://github.com/emrecancorapci/YetAnotherBlogProject_Frontend',
   },
   {
@@ -29,42 +24,27 @@ const projects = [
   },
   {
     title: 'CHESS CONSOLE APP',
-    technologies: ['JUST C++'],
+    technologies: ['JUST​C++', 'AND​SOME​STL'],
     source: 'https://github.com/emrecancorapci/cpp_chess',
   },
 ];
 
 export default function Projects() {
   return (
-    <div className="bg-black py-4">
-      <div className="container bg-black">
-        <div className="row">
-          <div className="col">
-            <p className="text-center text-white h09">PROJECTS:</p>
-          </div>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <p className="text-center text-white h09">PROJECTS:</p>
         </div>
-        <div className="row">
+      </div>
+      <div className="row">
+        {projects.map((project) => (
           <div className="col-12 col-lg-6 col-md-12 p-3">
             <Card>
-              <ProjectCard data={projects[0]} />
+              <ProjectCard data={project} />
             </Card>
           </div>
-          <div className="col-12 col-lg-6 col-md-12 p-3">
-            <Card>
-              <ProjectCard data={projects[1]} />
-            </Card>
-          </div>
-          <div className="col-12 col-lg-6 col-md-12 p-3">
-            <Card>
-              <ProjectCard data={projects[2]} />
-            </Card>
-          </div>
-          <div className="col-12 col-lg-6 col-md-12 p-3">
-            <Card>
-              <ProjectCard data={projects[3]} />
-            </Card>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

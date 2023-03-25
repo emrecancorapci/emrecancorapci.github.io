@@ -8,20 +8,22 @@ import Home from './Pages/Home';
 import Projects from './Pages/Projects';
 import ContactMe from './Pages/ContactMe';
 
+const Page = styled.div`
+  padding: 0;
+  overflow-y: ${(props) => (props.overflow ? 'scroll' : 'hidden')}};
+  overflow-x: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  &.active {
+    max-height: 80vh;
+  }
+`;
+
 /**
  * App component
  * @description This is the main component of the app. It contains the Navigation, Home, Projects and ContactMe components.
  * @returns {JSX.Element} App
  */
-
-const Page = styled.div`
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  max-height: 0;
-  &.active {
-    max-height: ${(props) => props.height};
-  }
-`;
 
 export default function App() {
   const { activePage } = useActive();
@@ -33,23 +35,17 @@ export default function App() {
         </div>
       </nav>
       <main>
-        <Page className={`row ${activePage === 'Home' ? 'active' : ''}`} height="80vh">
-          <div className="col">
-            <Home />
-          </div>
+        <Page className={`container-fluid bg-sugar ${activePage === 'Home' ? 'active' : ''}`}>
+          <Home />
         </Page>
-        <Page className={`row ${activePage === 'Projects' ? 'active' : ''}`} height="100vh">
-          <div className="col">
-            <Projects />
-          </div>
+        <Page className={`container-fluid bg-black ${activePage === 'Projects' ? 'active' : ''}`} overflow>
+          <Projects />
         </Page>
-        <Page className={`row ${activePage === 'ContactMe' ? 'active' : ''}`} height="80vh">
-          <div className="col">
-            <ContactMe />
-          </div>
+        <Page className={`container-fluid bg-ice ${activePage === 'ContactMe' ? 'active' : ''}`}>
+          <ContactMe />
         </Page>
       </main>
-      <footer className="row mt-4">
+      <footer className="row p-4 bg-black">
         <Footer />
       </footer>
     </>

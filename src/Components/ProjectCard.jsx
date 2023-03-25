@@ -25,7 +25,8 @@ const TechBlack = styled.span`
 const SourceText = styled.a`
   display: inline-block;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
+  margin: 0 0.5rem;
 
   text-align: right !important;
   font-size: 3rem;
