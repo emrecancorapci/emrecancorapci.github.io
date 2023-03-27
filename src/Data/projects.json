@@ -1,0 +1,37 @@
+[
+  {
+    "title": "YET ANOTHER BLOG PROJECT BACKEND",
+    "technologies": ["LAYERED​ARCHITECTURE", ".NET7", "ENTITY​FRAMEWORK", "POSTGRESQL"],
+    "source": "https://github.com/emrecancorapci/YetAnotherBlogProject_Backend"
+  },
+  {
+    "title": "YET ANOTHER BLOG PROJECT FRONTEND",
+    "technologies": ["REACT", "BOOTSTRAP", "TYPESCRIPT", "FONT​AWESOME", "VITE"],
+    "source": "https://github.com/emrecancorapci/YetAnotherBlogProject_Frontend"
+  },
+  {
+    "title": "JOBS API",
+    "technologies": ["NODEJS", "EXPRESSJS", "MONGOOSE", "MONGODB"],
+    "source": "https://github.com/emrecancorapci/express_jobs-api"
+  },
+  {
+    "title": "BLOG PROJECT",
+    "technologies": ["SVELTEKIT", "BOOTSTRAP", "VITE"],
+    "source": "https://github.com/emrecancorapci/express_jobs-api"
+  },
+  {
+    "title": "CHESS CONSOLE APP",
+    "technologies": ["JUST​C++", "AND​SOME​STL"],
+    "source": "https://github.com/emrecancorapci/cpp_chess"
+  },
+  {
+    "title": "THOMAS WAS LATE",
+    "technologies": ["C++", "SFML2", "STL", "GLSL"],
+    "source": "https://github.com/emrecancorapci/sfml-ThomasWasLate"
+  },
+  {
+    "title": "SPACE GAME",
+    "technologies": ["PYTHON", "PYGAME"],
+    "source": "https://github.com/emrecancorapci/sfml-ThomasWasLate"
+  }
+]

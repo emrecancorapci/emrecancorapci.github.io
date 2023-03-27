@@ -48,6 +48,13 @@ h3 {
   font-weight: 700 !important;
 }
 
+.text-sugar {
+  color: rgb(255, 46, 99);
+}
+
+.text-ice {
+  color: rgb(8, 217, 214);
+}
 .bg-sugar {
   background-color: rgb(255, 46, 99);
 }
@@ -68,6 +75,11 @@ h3 {
   background-color: rgb(234, 234, 234) !important;
 }
 
+.h07{
+  font-size: 5rem !important;
+  font-weight: 700 !important;
+  line-height: 5rem;
+}
 .h08{
   font-size: 4rem !important;
   font-weight: 700 !important;
