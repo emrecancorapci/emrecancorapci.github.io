@@ -76,18 +76,30 @@ h3 {
 }
 
 .h07{
-  font-size: 5rem !important;
   font-weight: 700 !important;
+  font-size: 5rem !important;
   line-height: 5rem;
 }
 .h08{
-  font-size: 4rem !important;
   font-weight: 700 !important;
+  font-size: 4rem !important;
   line-height: 4rem;
 }
 
 .h09 {
-  font-size: 3.5rem !important;
   font-weight: 700 !important;
+  font-size: 3.5rem !important;
   line-height: 3.5rem;
+}
+
+.h10 {
+  font-weight: 700 !important;
+  font-size: 3rem !important;
+  line-height: 3rem;
+}
+
+.h11 {
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  line-height: 2.5rem;
 }
