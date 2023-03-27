@@ -1,25 +1,12 @@
 /* eslint-disable no-irregular-whitespace */
 import styled from 'styled-components';
+import NoSpaceList from './NoSpaceList';
 
 const CardTitle = styled.h1`
   font-size: 3.5rem !important;
   font-weight: 700 !important;
   line-height: 3.5rem;
   color: black !important;
-`;
-
-const TechWhite = styled.span`
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 2.5rem;
-  color: white;
-`;
-
-const TechBlack = styled.span`
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 2.5rem;
-  color: black;
 `;
 
 const SourceText = styled.a`
@@ -51,12 +38,7 @@ export default function ProjectCard({ data: { title, technologies, source } }) {
       <div className="row p-2">
         <div className="col">
           <CardTitle>{title}</CardTitle>
-          {technologies.map((technology, index) =>
-            // eslint-disable-next-line prettier/prettier
-            (index % 2 === 0
-            ? <TechWhite>{technology}​</TechWhite>
-            : <TechBlack>{technology}​</TechBlack>)
-          )}
+          <NoSpaceList list={technologies} />
         </div>
       </div>
 
