@@ -18,6 +18,8 @@ const TextBlack = styled.span`
 export default function NoSpaceList({ list }) {
   return list.map((str, index) =>
     // eslint-disable-next-line prettier/prettier
-    index % 2 === 0 ? <TextWhite>{str}​</TextWhite> : <TextBlack>{str}​</TextBlack>,
+    index % 2 === 0
+    ? <TextWhite>{str}​</TextWhite>
+    : <TextBlack>{str}​</TextBlack>
   );
 }

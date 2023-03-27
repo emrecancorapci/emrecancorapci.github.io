@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useActive } from './Contexts/ActiveContext';
 
 import Footer from './Components/Footer';
-import Navigation from './Components/Navigation/Navigation';
+import Navigation from './Components/Navigation';
 import Home from './Pages/Home';
 import Projects from './Pages/Projects';
 import ContactMe from './Pages/ContactMe';
@@ -39,7 +39,7 @@ export default function App() {
         </div>
       </nav>
       <main>
-        <Page className={`bg-sugar ${activePage === 'home' ? 'active' : ''}`} height="150vh">
+        <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} height="150vh">
           <div style={{ height: '6.6rem' }} />
           <Home />
         </Page>

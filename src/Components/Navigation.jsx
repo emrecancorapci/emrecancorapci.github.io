@@ -7,9 +7,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
-import { useActive } from '../../Contexts/ActiveContext';
+import { useActive } from '../Contexts/ActiveContext';
 
-import NavLink from './NavLink';
+import NavLink from './Navigation/NavLink';
 
 const sugarNice = `
 color: rgb(255, 46, 99) !important;
@@ -76,7 +76,7 @@ function Navigation() {
               <NavLink>PROJECTS</NavLink>
               <NavLink>CONTACT ME</NavLink>
             </div>
-            <div className="col-auto">
+            <div className="col-auto pt-1">
               <a href="mailto:emrecancorapci@gmail.com" target="_blank" rel="noopener noreferrer">
                 <AwwwsomeLogo icon={faEnvelope} size="2xl" />
               </a>
