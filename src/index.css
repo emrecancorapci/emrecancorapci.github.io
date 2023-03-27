@@ -12,7 +12,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -48,6 +48,18 @@ h3 {
   font-weight: 700 !important;
 }
 
+#root {
+  background: black;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
 .text-sugar {
   color: rgb(255, 46, 99);
 }
@@ -55,6 +67,7 @@ h3 {
 .text-ice {
   color: rgb(8, 217, 214);
 }
+
 .bg-sugar {
   background-color: rgb(255, 46, 99);
 }
@@ -75,12 +88,13 @@ h3 {
   background-color: rgb(234, 234, 234) !important;
 }
 
-.h07{
+.h07 {
   font-weight: 700 !important;
   font-size: 5rem !important;
   line-height: 5rem;
 }
-.h08{
+
+.h08 {
   font-weight: 700 !important;
   font-size: 4rem !important;
   line-height: 4rem;

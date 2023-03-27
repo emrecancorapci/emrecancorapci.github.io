@@ -18,12 +18,17 @@ color: rgb(255, 46, 99) !important;
 }
 `;
 
+const NavBackground = styled.div`
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(0.5rem);
+`;
+
 const Menu = styled.div`
   overflow: hidden;
   transition: max-height 0.3s ease-out;
   max-height: 0;
   &.active {
-    max-height: 15rem;
+    max-height: 16rem;
   }
 `;
 
@@ -54,19 +59,19 @@ function Navigation() {
   }, [activePage]);
 
   return (
-    <>
-      <div className="container pt-3 pb-1">
+    <NavBackground>
+      <div className="container pt-2 pb-1">
         <div className="row align-items-center">
           <Title className="col text-center">EMRE CAN ÇORAPÇI</Title>
-          <div className="col-auto h-100 mb-4">
+          <div className="col-auto h-100 mb-2">
             <AwwwsomeIcon icon={faBars} size="xl" onClick={() => setActive(!active)} />
           </div>
         </div>
       </div>
-      <Menu className={`bg-darker ${active ? 'active' : ''}`}>
-        <div className="container my-2 mt-3">
+      <Menu className={active ? 'active' : ''}>
+        <div className="container my-3 mb-4">
           <div className="row justify-content-between">
-            <div className="col">
+            <div className="nav col-auto flex-column">
               <NavLink>HOME</NavLink>
               <NavLink>PROJECTS</NavLink>
               <NavLink>CONTACT ME</NavLink>
@@ -85,7 +90,7 @@ function Navigation() {
           </div>
         </div>
       </Menu>
-    </>
+    </NavBackground>
   );
 }
 

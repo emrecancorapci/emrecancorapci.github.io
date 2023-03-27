@@ -9,13 +9,17 @@ import Projects from './Pages/Projects';
 import ContactMe from './Pages/ContactMe';
 
 const Page = styled.div`
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
-  overflow-y: ${(props) => (props.overflow ? 'scroll' : 'hidden')}};
-  overflow-x: hidden;
+  overflow: hidden;
+
   transition: max-height 0.3s ease-out;
   max-height: 0;
   &.active {
-    max-height: 80vh;
+    max-height: ${(props) => props.height};
   }
 `;
 
@@ -29,19 +33,22 @@ export default function App() {
   const { activePage } = useActive();
   return (
     <>
-      <nav className="row bg-black">
+      <nav className="row">
         <div className="col">
           <Navigation />
         </div>
       </nav>
       <main>
-        <Page className={`container-fluid bg-sugar ${activePage === 'home' ? 'active' : ''}`}>
+        <Page className={`bg-sugar ${activePage === 'home' ? 'active' : ''}`} height="150vh">
+          <div style={{ height: '6.6rem' }} />
           <Home />
         </Page>
-        <Page className={`container-fluid bg-black ${activePage === 'projects' ? 'active' : ''}`} overflow>
+        <Page className={`bg-black ${activePage === 'projects' ? 'active' : ''}`} height="400vh">
+          <div style={{ height: '6.6rem' }} />
           <Projects />
         </Page>
-        <Page className={`container-fluid bg-ice ${activePage === 'contact me' ? 'active' : ''}`}>
+        <Page className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`}>
+          <div style={{ height: '6.6rem' }} />
           <ContactMe />
         </Page>
       </main>
