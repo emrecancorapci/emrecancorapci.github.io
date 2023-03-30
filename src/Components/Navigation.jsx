@@ -7,6 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
+import useScroll from '../Hooks/useScroll';
 import { useActive } from '../Contexts/ActiveContext';
 
 import NavLink from './Navigation/NavLink';
@@ -18,9 +19,15 @@ color: rgb(255, 46, 99) !important;
 }
 `;
 
-const NavBackground = styled.div`
+const Nav = styled.div`
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(0.5rem);
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  &.active {
+    max-height: 300px;
+  }
 `;
 
 const Menu = styled.div`
@@ -50,25 +57,39 @@ const AwwwsomeLogo = styled(FontAwesomeIcon)`
   ${sugarNice}
 `;
 
+/**
+ * Navigation component
+ * @description This component is the navigation bar of the app. It contains the navigation links and the menu button.
+ * @return {JSX.Element} Navigation
+ */
+
 function Navigation() {
-  const [active, setActive] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
   const { activePage } = useActive();
+  const { scrollY, isScrollingDown } = useScroll();
 
   useEffect(() => {
-    setActive((menuActive) => !menuActive);
+    setShowMenu((visibility) => !visibility);
   }, [activePage]);
 
+  useEffect(() => {
+    const isVisible = !isScrollingDown || scrollY < 50;
+    setShowNav(isVisible);
+    setShowMenu(false);
+  }, [scrollY, isScrollingDown]);
+
   return (
-    <NavBackground>
+    <Nav className={showNav && 'active'}>
       <div className="container pt-2 pb-1">
         <div className="row align-items-center">
           <Title className="col text-center">EMRE CAN ÇORAPÇI</Title>
           <div className="col-auto h-100 mb-2">
-            <AwwwsomeIcon icon={faBars} size="xl" onClick={() => setActive(!active)} />
+            <AwwwsomeIcon icon={faBars} size="xl" onClick={() => setShowMenu(!showMenu)} />
           </div>
         </div>
       </div>
-      <Menu className={active ? 'active' : ''}>
+      <Menu className={showMenu ? 'active' : ''}>
         <div className="container my-3 mb-4">
           <div className="row justify-content-between">
             <div className="nav col-auto flex-column">
@@ -90,7 +111,7 @@ function Navigation() {
           </div>
         </div>
       </Menu>
-    </NavBackground>
+    </Nav>
   );
 }
 
