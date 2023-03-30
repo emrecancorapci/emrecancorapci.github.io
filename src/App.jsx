@@ -14,6 +14,7 @@ const Page = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+  padding-top: ${window.screen.width >= 768 ? 100 : 160}px;
   overflow: hidden;
 
   transition: max-height 0.3s ease-out;
@@ -40,15 +41,12 @@ export default function App() {
       </nav>
       <main>
         <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} height="150vh">
-          <div style={{ height: '6.6rem' }} />
           <Home />
         </Page>
         <Page className={`bg-black ${activePage === 'projects' ? 'active' : ''}`} height="400vh">
-          <div style={{ height: '6.6rem' }} />
           <Projects />
         </Page>
         <Page className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`}>
-          <div style={{ height: '6.6rem' }} />
           <ContactMe />
         </Page>
       </main>

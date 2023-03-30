@@ -1,7 +1,15 @@
 [
   {
     "title": "YET ANOTHER BLOG PROJECT BACKEND",
-    "technologies": ["LAYERED​ARCHITECTURE", ".NET7", "ENTITY​FRAMEWORK", "POSTGRESQL"],
+    "technologies": [
+      ".NET7",
+      "ENTITY​FRAMEWORK",
+      "POSTGRESQL",
+      "LAYERED​ARCHITECTURE",
+      "REPOSITORY​PATTERN",
+      "CODE​FIRST​APPROACH",
+      "AUTHENTICATION"
+    ],
     "source": "https://github.com/emrecancorapci/YetAnotherBlogProject_Backend"
   },
   {
@@ -21,7 +29,7 @@
   },
   {
     "title": "CHESS CONSOLE APP",
-    "technologies": ["JUST​C++", "AND​SOME​STL"],
+    "technologies": ["C++", "STL", "ASYNC​PROGGAMMING", "DESIGN​PATTERNS"],
     "source": "https://github.com/emrecancorapci/cpp_chess"
   },
   {
