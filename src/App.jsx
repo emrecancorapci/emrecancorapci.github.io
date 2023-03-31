@@ -14,12 +14,12 @@ const Page = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  padding-top: ${window.screen.width >= 768 ? 100 : 160}px;
   overflow: hidden;
 
   transition: max-height 0.3s ease-out;
   max-height: 0;
   &.active {
+    padding-top: ${window.screen.width >= 768 ? 100 : 180}px;
     max-height: ${(props) => props.height};
   }
 `;
@@ -34,10 +34,8 @@ export default function App() {
   const { activePage } = useActive();
   return (
     <>
-      <nav className="row">
-        <div className="col">
-          <Navigation />
-        </div>
+      <nav className="container-fluid p-0">
+        <Navigation />
       </nav>
       <main>
         <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} height="150vh">
@@ -50,7 +48,7 @@ export default function App() {
           <ContactMe />
         </Page>
       </main>
-      <footer className="row p-4 bg-black">
+      <footer className="container-fluid p-4 bg-black">
         <Footer />
       </footer>
     </>
