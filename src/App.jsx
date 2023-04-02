@@ -19,8 +19,19 @@ const Page = styled.div`
   transition: max-height 0.3s ease-out, padding-top 0.3s ease-out;
   max-height: 0;
   &.active {
-    padding-top: ${window.screen.width >= 768 ? 100 : 180}px;
-    max-height: ${(props) => props.height};
+    @media (min-width: 768px) {
+      padding-top: 100px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 180px;
+    }
+
+    @media (min-width: 985px) {
+      max-height: ${(props) => props.webHeight};
+    }
+    @media (max-width: 984px) {
+      max-height: ${(props) => props.mobileHeight};
+    }
   }
 `;
 
@@ -38,13 +49,21 @@ export default function App() {
         <Navigation />
       </nav>
       <main>
-        <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} height="150vh">
+        <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} webHeight="300vh" mobileHeight="300vh">
           <Home />
         </Page>
-        <Page className={`bg-black ${activePage === 'projects' ? 'active' : ''}`} height="400vh">
+        <Page
+          className={`bg-black ${activePage === 'projects' ? 'active' : ''}`}
+          webHeight="5000vh"
+          mobileHeight="700vh"
+        >
           <Projects />
         </Page>
-        <Page className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`} height="100vh">
+        <Page
+          className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`}
+          webHeight="2000vh"
+          mobileHeight="200vh"
+        >
           <ContactMe />
         </Page>
       </main>
