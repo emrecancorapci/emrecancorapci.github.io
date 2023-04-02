@@ -16,7 +16,7 @@ const Page = styled.div`
   padding: 0;
   overflow: hidden;
 
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out, padding-top 0.3s ease-out;
   max-height: 0;
   &.active {
     padding-top: ${window.screen.width >= 768 ? 100 : 180}px;
@@ -44,7 +44,7 @@ export default function App() {
         <Page className={`bg-black ${activePage === 'projects' ? 'active' : ''}`} height="400vh">
           <Projects />
         </Page>
-        <Page className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`}>
+        <Page className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`} height="100vh">
           <ContactMe />
         </Page>
       </main>
