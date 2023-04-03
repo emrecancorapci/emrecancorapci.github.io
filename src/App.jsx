@@ -49,7 +49,7 @@ export default function App() {
         <Navigation />
       </nav>
       <main>
-        <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} webHeight="300vh" mobileHeight="300vh">
+        <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} webHeight="200vh" mobileHeight="400vh">
           <Home />
         </Page>
         <Page
@@ -67,7 +67,7 @@ export default function App() {
           <ContactMe />
         </Page>
       </main>
-      <footer className="container-fluid p-4 bg-black">
+      <footer className="container-fluid">
         <Footer />
       </footer>
     </>

@@ -105,14 +105,38 @@ nav {
   line-height: 3.5rem;
 }
 
+.h09p {
+  font-weight: 700 !important;
+  font-size: 3.5rem !important;
+  line-height: 4rem;
+}
+
 .h10 {
   font-weight: 700 !important;
   font-size: 3rem !important;
   line-height: 3rem;
 }
 
+.h10p {
+  font-weight: 700 !important;
+  font-size: 3rem !important;
+  line-height: 3.5rem;
+}
+
 .h11 {
   font-weight: 700 !important;
   font-size: 2.5rem !important;
+  line-height: 2.5rem;
+}
+
+.h11p {
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  line-height: 3rem;
+}
+
+.h12p {
+  font-weight: 700 !important;
+  font-size: 2rem !important;
   line-height: 2.5rem;
 }
