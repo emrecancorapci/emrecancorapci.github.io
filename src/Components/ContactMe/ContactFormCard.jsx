@@ -12,10 +12,8 @@ const CardOneTop = styled.div`
 
 export default function ContactFormCard({ children }) {
   return (
-    <div className="container-fluid p-0 ps-4">
-      <CardOneBottom className="row my-2 mx-4">
-        <CardOneTop className="col">{children}</CardOneTop>
-      </CardOneBottom>
-    </div>
+    <CardOneBottom className="row">
+      <CardOneTop className="col">{children}</CardOneTop>
+    </CardOneBottom>
   );
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const CardOneBottom = styled.div`
-  height: 97%;
+  height: 100%;
   background-color: rgb(8, 217, 214);
 `;
 
@@ -17,7 +17,7 @@ const CardOneTop = styled.div`
 
 function Card({ children }) {
   return (
-    <CardOneBottom className="row my-2 mx-4">
+    <CardOneBottom className="row">
       <CardOneTop className="col">{children}</CardOneTop>
     </CardOneBottom>
   );
