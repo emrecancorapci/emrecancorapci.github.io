@@ -26,7 +26,6 @@ const Shadow = styled.p`
   text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.9);
 `;
 
-
 function Home() {
   return (
     <>

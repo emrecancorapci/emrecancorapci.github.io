@@ -1,4 +1,4 @@
-import Card from '../Components/Project/Card';
+import Card from '../Components/Common/Card';
 import ProjectCard from '../Components/Project/ProjectCard';
 
 import projects from '../Data/projects.json';
@@ -14,9 +14,11 @@ export default function Projects() {
       <div className="row">
         {projects.map((project) => (
           <div className="col-12 col-lg-6 col-md-12 p-3">
-            <Card>
-              <ProjectCard data={project} />
-            </Card>
+            <div className="my-2 mx-4 h-100">
+              <Card>
+                <ProjectCard data={project} />
+              </Card>
+            </div>
           </div>
         ))}
       </div>

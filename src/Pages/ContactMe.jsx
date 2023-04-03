@@ -12,7 +12,7 @@ const Title = styled.h1`
 `;
 
 const Container = styled.div`
-  min-height: 72.1vh;
+  min-height: 74vh;
 `;
 
 function ContactMe() {
