@@ -7,7 +7,8 @@ const Link = styled.a`
   font-size: 2.5rem;
   line-height: 3rem;
   color: rgb(255, 46, 99) !important;
-  &:hover {
+
+  :hover {
     color: rgb(8, 217, 214) !important;
   }
 `;

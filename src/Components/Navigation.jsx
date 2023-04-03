@@ -21,12 +21,18 @@ color: rgb(255, 46, 99) !important;
 
 const Nav = styled.div`
   background: rgba(0, 0, 0, 0.8);
+
   backdrop-filter: blur(0.5rem);
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.5s ease-out;
   max-height: 0;
   &.active {
-    max-height: 300px;
+    @media (min-width: 768px) {
+      max-height: 300px;
+    }
+    @media (max-width: 767px) {
+      max-height: 360px;
+    }
   }
 `;
 
@@ -35,7 +41,7 @@ const Menu = styled.div`
   transition: max-height 0.3s ease-out;
   max-height: 0;
   &.active {
-    max-height: 16rem;
+    max-height: 180px;
   }
 `;
 
@@ -91,13 +97,13 @@ function Navigation() {
       </div>
       <Menu className={showMenu ? 'active' : ''}>
         <div className="container my-3 mb-4">
-          <div className="row justify-content-between">
-            <div className="nav col-auto flex-column">
+          <div className="row justify-content-between px-2">
+            <div className="nav col-auto flex-column px-0">
               <NavLink>HOME</NavLink>
               <NavLink>PROJECTS</NavLink>
               <NavLink>CONTACT ME</NavLink>
             </div>
-            <div className="col-auto pt-1">
+            <div className="col-auto pt-1 px-0">
               <a href="mailto:emrecancorapci@gmail.com" target="_blank" rel="noopener noreferrer">
                 <AwwwsomeLogo icon={faEnvelope} size="2xl" />
               </a>

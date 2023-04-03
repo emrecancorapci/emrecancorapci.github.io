@@ -7,7 +7,12 @@ const CardOneBottom = styled.div`
 
 const CardOneTop = styled.div`
   background-color: rgb(255, 46, 99);
-  margin: -16px 0px 16px -16px;
+  margin: 0;
+  transition: margin 0.2s ease-out;
+
+  :hover {
+    margin: -8px 0px 8px -8px;
+  }
 `;
 
 function Card({ children }) {

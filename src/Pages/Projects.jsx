@@ -1,5 +1,5 @@
-import Card from '../Components/Projects/Card';
-import ProjectCard from '../Components/Projects/ProjectCard';
+import Card from '../Components/Project/Card';
+import ProjectCard from '../Components/Project/ProjectCard';
 
 import projects from '../Data/projects.json';
 

@@ -54,14 +54,14 @@ export default function App() {
         </Page>
         <Page
           className={`bg-black ${activePage === 'projects' ? 'active' : ''}`}
-          webHeight="5000vh"
+          webHeight="500vh"
           mobileHeight="700vh"
         >
           <Projects />
         </Page>
         <Page
           className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`}
-          webHeight="2000vh"
+          webHeight="200vh"
           mobileHeight="200vh"
         >
           <ContactMe />

@@ -1,6 +1,6 @@
 /* eslint-disable no-irregular-whitespace */
 import styled from 'styled-components';
-import NoSpaceList from './NoSpaceList';
+import NoSpaceList from '../Common/NoSpaceList';
 
 const CardTitle = styled.h1`
   font-size: 3.5rem !important;
