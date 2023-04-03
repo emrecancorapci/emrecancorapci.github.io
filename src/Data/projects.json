@@ -1,14 +1,25 @@
 [
   {
+    "title": "THIS SITE",
+    "technologies": [
+      "REACT",
+      "REACT​HOOK​FORM",
+      "BOOTSTRAP",
+      "STYLED​COMPONENTS",
+      "FONT​AWESOME",
+      "VITE"
+    ],
+    "source": "https://github.com/emrecancorapci/react_portfolio-project"
+  },
+  {
     "title": "YET ANOTHER BLOG PROJECT BACKEND",
     "technologies": [
       ".NET7",
       "ENTITY​FRAMEWORK",
       "POSTGRESQL",
       "LAYERED​ARCHITECTURE",
-      "REPOSITORY​PATTERN",
       "CODE​FIRST​APPROACH",
-      "AUTHENTICATION"
+      "JWT​AUTHENTICATION"
     ],
     "source": "https://github.com/emrecancorapci/YetAnotherBlogProject_Backend"
   },
@@ -25,7 +36,7 @@
   {
     "title": "BLOG PROJECT",
     "technologies": ["SVELTEKIT", "BOOTSTRAP", "VITE"],
-    "source": "https://github.com/emrecancorapci/express_jobs-api"
+    "source": "https://github.com/emrecancorapci/sveltekit_blog"
   },
   {
     "title": "CHESS CONSOLE APP",
@@ -40,6 +51,6 @@
   {
     "title": "SPACE GAME",
     "technologies": ["PYTHON", "PYGAME"],
-    "source": "https://github.com/emrecancorapci/sfml-ThomasWasLate"
+    "source": "https://github.com/emrecancorapci/pygame-SpaceGame"
   }
 ]
