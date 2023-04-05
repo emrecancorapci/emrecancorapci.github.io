@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import * as bootstrap from 'bootstrap';
 
 import App from './App';
 import ActivePageProvider from './Contexts/ActiveContext';
 
 import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './scss/styles.scss';
 
 /**
  * Main component
