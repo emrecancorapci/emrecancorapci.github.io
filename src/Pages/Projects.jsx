@@ -5,7 +5,7 @@ import projects from '../Data/projects.json';
 
 export default function Projects() {
   return (
-    <div className="container">
+    <div className="container my-5">
       <div className="row">
         <div className="col py-2">
           <p className="text-center text-white h07">PROJECTS:</p>
