@@ -49,20 +49,20 @@ export default function App() {
         <Navigation />
       </nav>
       <main>
-        <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} webHeight="250vh" mobileHeight="400vh">
+        <Page className={`bg-dark ${activePage === 'home' ? 'active' : ''}`} webHeight="250vh" mobileHeight="450vh">
           <Home />
         </Page>
         <Page
           className={`bg-black ${activePage === 'projects' ? 'active' : ''}`}
           webHeight="250vh"
-          mobileHeight="700vh"
+          mobileHeight="450vh"
         >
           <Projects />
         </Page>
         <Page
           className={`bg-ice ${activePage === 'contact me' ? 'active' : ''}`}
-          webHeight="200vh"
-          mobileHeight="200vh"
+          webHeight="100vh"
+          mobileHeight="120vh"
         >
           <ContactMe />
         </Page>

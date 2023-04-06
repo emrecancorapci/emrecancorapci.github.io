@@ -15,7 +15,7 @@ const Container = styled.div`
   min-height: 74vh;
 `;
 
-function ContactMe() {
+export default function ContactMe() {
   return (
     <Container className="container my-5">
       <div className="row justify-content-center align-items-center">
@@ -29,5 +29,3 @@ function ContactMe() {
     </Container>
   );
 }
-
-export default ContactMe;

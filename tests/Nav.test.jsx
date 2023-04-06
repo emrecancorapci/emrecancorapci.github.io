@@ -1,13 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import { render } from './test-util';
 import Navigation from '../src/Components/Navigation';
-import ActivePageProvider from '../src/Contexts/ActiveContext';
 
 test('Renders nav title', () => {
-  render(
-    <ActivePageProvider>
-      <Navigation />
-    </ActivePageProvider>,
-  );
+  render(<Navigation />);
   const linkElement = screen.getByText(/EMRE CAN ÇORAPÇI/i);
   expect(linkElement).toBeInTheDocument();
 });

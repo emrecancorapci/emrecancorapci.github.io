@@ -35,7 +35,7 @@ const SourceBackground = styled.p`
 export default function ProjectCard({ data: { title, technologies, source } }) {
   return (
     <>
-      <div className="row p-2">
+      <div data-testid="project-card" className="row p-2">
         <div className="col">
           <CardTitle>{title}</CardTitle>
           <NoSpaceList list={technologies} />

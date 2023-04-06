@@ -121,6 +121,7 @@ function Form() {
                   type="text"
                   className="mb-2"
                   placeholder="EMAIL"
+                  id="emailControl"
                   {...register('email', { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })}
                   aria-invalid={errors.email ? 'true' : 'false'}
                 />
@@ -135,6 +136,7 @@ function Form() {
                   type="text"
                   className="mb-2"
                   placeholder="SUBJECT"
+                  id="subjectControl"
                   {...register('subject', { required: true, minLength: 5 })}
                   aria-invalid={errors.subject ? 'true' : 'false'}
                 />
@@ -146,6 +148,7 @@ function Form() {
                 className="mt-1 mt-3"
                 rows={5}
                 placeholder="ENTER YOUR MESSAGE RIGHT HERE! RIGHT NOW!"
+                id="messageControl"
                 {...register('message', { required: true, minLength: 10 })}
                 aria-invalid={errors.message ? 'true' : 'false'}
               />
@@ -161,13 +164,13 @@ function Form() {
             {(errors.name || errors.email || errors.subject || errors.message) && (
               <Error className="alert alert-danger mt-3 rounded-0 mt-4">
                 {errors.name?.type === 'required' && <li>Name field is required.</li>}
-                {errors.name?.type === 'minLength' && <li>Name field must be longer than 4 characters.</li>}
+                {errors.name?.type === 'minLength' && <li>Name field should be at least 4 characters.</li>}
                 {errors.email?.type === 'required' && <li>Email field is required.</li>}
-                {errors.email?.type === 'pattern' && <li>Email is invalid.</li>}
-                {errors.subject?.type === 'required' && <li>Subject field is required</li>}
-                {errors.subject?.type === 'minLength' && <li>Subject field must be longer than 5 characters.</li>}
-                {errors.message?.type === 'required' && <li>Message field is required</li>}
-                {errors.message?.type === 'minLength' && <li>Message field must be longer than 10 characters.</li>}
+                {errors.email?.type === 'pattern' && <li>Email field should be a valid email.</li>}
+                {errors.subject?.type === 'required' && <li>Subject field is required.</li>}
+                {errors.subject?.type === 'minLength' && <li>Subject field should be at least 5 characters.</li>}
+                {errors.message?.type === 'required' && <li>Message field is required.</li>}
+                {errors.message?.type === 'minLength' && <li>Message field should be at least 10 characters.</li>}
               </Error>
             )}
           </form>
